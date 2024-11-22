@@ -4,9 +4,17 @@
     {
         static void Main(string[] args)
         {
-            List<string> coolPeople = new List<string>();
-            coolPeople = Exercises002.GetCoolPeople();
-            coolPeople.ForEach(x => Console.WriteLine(x));
+            //List<string> coolPeople = new List<string>();
+            //coolPeople = Exercises002.GetCoolPeople();
+            //coolPeople.ForEach(x => Console.WriteLine(x));
+
+            //Exercises002.GetUsernames();
+
+            //  List<string> names = new List<string>() { "rich.neat@boardgamer.com", "poppy.mcdonnell@irishdancer.com", "neil.hughes@walkingoncustard.com", "alice.yang@midfielder.com", "pippa.austin@musician.com" };
+            //List<String> names = Exercises002.GetCoolPeople();
+            //Exercises002.PrintCoolPeople(names);
+            List<int> numbers = new List<int>() { 1, 2, 3 };
+            Exercises002.PrintSquaredNums(numbers);
 
 
             //int square = Exercises001.SquareIt(2);
