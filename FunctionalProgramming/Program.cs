@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int square = Exercises001.SquareIt(2);
+            Console.WriteLine($"SquareIt: {square}");
+
+
         }
     }
 }
