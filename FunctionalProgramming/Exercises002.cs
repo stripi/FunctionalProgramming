@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class Exercises002
+    public class Exercises002
     {
         public static Func<List<string>> GetCoolPeople = () => new List<string> { "rich.neat@boardgamer.com", "poppy.mcdonnell@irishdancer.com", "neil.hughes@walkingoncustard.com", "alice.yang@midfielder.com", "pippa.austin@musician.com" };
 
@@ -29,10 +29,7 @@ namespace FunctionalProgramming
             }
 
         };
-        
-        
-       
-
+      
         public static Action<List<int>> PrintNums = (numbers) => { numbers.ForEach(number => Console.WriteLine(number)); };
 
         public static Action<List<int>> PrintSquaredNums = (numbers) =>
@@ -41,5 +38,38 @@ namespace FunctionalProgramming
                                                                             
                                                                             PrintNums(numbers);
                                                                         };
+
+        public static Dictionary<string, List<string>> FilterEmail(List<string> emailList)
+        {
+            Dictionary<string, List<string>> filteredEmail = new Dictionary<string, List<string>>();
+            List<string> couk = new List<string>();
+            List<string> com = new List<string>();
+            List<string> invalid = new List<string>();
+
+
+            foreach (string email in emailList)
+            {
+                if (email.Contains(".co.uk"))
+                    {
+                    couk.Add(email); 
+                    }
+                else if (email.Contains(".com"))
+                {
+                    com.Add(email);
+                }
+                else
+                {
+                    invalid.Add(email);
+                }
+            }
+            filteredEmail.Add(".co.uk", couk);
+            filteredEmail.Add(".com", com);
+            filteredEmail.Add("invalid", invalid);
+
+
+            return filteredEmail;
+        }
+
+
     }
 }
